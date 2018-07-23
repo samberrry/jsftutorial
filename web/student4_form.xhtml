@@ -9,24 +9,21 @@
 
 <h:body>
     <h:form>
-        First name: <h:inputText id="firstname" value="#{studentThree.firstName}"></h:inputText>
+        First name: <h:inputText id="firstname" value="#{studentFour.firstName}"></h:inputText>
         <br/><br/>
-        Last name: <h:inputText id="lastname" value="#{studentThree.lastName}"></h:inputText>
-        <br/> <br/>
-        <h:selectOneMenu value="#{studentThree.country}">
-            <f:selectItems value="#{studentThree.countryOptions}"></f:selectItems>
-        </h:selectOneMenu>
+        Last name: <h:inputText id="lastname" value="#{studentFour.lastName}"></h:inputText>
         <br/> <br/>
 
-        <h:selectOneRadio value="#{studentThree.favoriteLanguage}">
+        Favorite programming languages:
+        <h:selectManyCheckbox value="#{studentFour.favoriteLanguages}">
             <f:selectItem itemValue="java" itemLabel="Java"></f:selectItem>
             <f:selectItem itemValue="php" itemLabel="PHP"></f:selectItem>
             <f:selectItem itemValue="python" itemLabel="Python"></f:selectItem>
             <f:selectItem itemValue="csharp" itemLabel="C#"></f:selectItem>
-        </h:selectOneRadio>
+        </h:selectManyCheckbox>
 
         <br/> <br/>
-        <h:commandButton value="submit" action="student3_response"></h:commandButton>
+        <h:commandButton value="submit" action="student4_response"></h:commandButton>
     </h:form>
 </h:body>
 
