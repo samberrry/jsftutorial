@@ -13,13 +13,17 @@
         <br/><br/>
         Last name: <h:inputText id="lastname" value="#{studentTwo.lastName}"></h:inputText>
         <br/> <br/>
+        <!--<h:selectOneMenu value="#{studentTwo.country}">-->
+            <!--<f:selectItem itemValue="Brazil" itemLabel="Brazil"></f:selectItem>-->
+            <!--<f:selectItem itemValue="France" itemLabel="France"></f:selectItem>-->
+            <!--<f:selectItem itemValue="Germany" itemLabel="Germany"></f:selectItem>-->
+            <!--<f:selectItem itemValue="India" itemLabel="India"></f:selectItem>-->
+            <!--<f:selectItem itemValue="Turkey" itemLabel="Turkey"></f:selectItem>-->
+        <!--</h:selectOneMenu>-->
         <h:selectOneMenu value="#{studentTwo.country}">
-            <f:selectItem itemValue="Brazil" itemLabel="Brazil"></f:selectItem>
-            <f:selectItem itemValue="France" itemLabel="France"></f:selectItem>
-            <f:selectItem itemValue="Germany" itemLabel="Germany"></f:selectItem>
-            <f:selectItem itemValue="India" itemLabel="India"></f:selectItem>
-            <f:selectItem itemValue="Turkey" itemLabel="Turkey"></f:selectItem>
+            <f:selectItems value="#{studentTwo.countryOptions}"></f:selectItems>
         </h:selectOneMenu>
+        <br/> <br/>
         <h:commandButton value="submit" action="student2_response"></h:commandButton>
     </h:form>
 </h:body>
